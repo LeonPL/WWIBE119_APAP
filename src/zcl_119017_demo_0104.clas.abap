@@ -33,6 +33,17 @@ CLASS zcl_119017_demo_0104 IMPLEMENTATION.
       out->write( |Bedinung erfüllt| ).
   ENDIF.
 
+  "Mehrfachverzwigung
+  CASE carrier_id.
+    WHEN 'LH' OR 'lh' OR 'lH' OR 'Lh'.
+    out->write( |Lufthansa| ).
+    WHEN 'BH'.
+    out->write( |British Airways| ).
+    WHEN OTHERS.
+        out->write( |Sonstiges| ).
+  ENDCASE.
+
+
 
 
   ENDMETHOD.
