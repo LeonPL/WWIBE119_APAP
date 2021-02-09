@@ -38,6 +38,7 @@ CLASS zcl_119017_exercise_0102 IMPLEMENTATION.
     "Numerische Funktionen
     result = abs( -3 ). out->write( |Betrag: | && result ).
     result = ipow( base = 5 exp = 3  ). out->write( |Potenz: | && result ).
+    result = nmin( val1 = 3 val2 = 5  ). out->write( |Minimum: | && result ).
 
   ENDMETHOD.
 ENDCLASS.
