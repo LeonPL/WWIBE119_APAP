@@ -41,6 +41,5 @@ CLASS zcl_119017_demo_0201 IMPLEMENTATION.
  flight_xt = CORRESPONDING #( connection ).
  flight_xt = CORRESPONDING #( Base ( flight_xt ) flight ).
 
-
-  ENDMETHOD.
+ ENDMETHOD.
 ENDCLASS.
