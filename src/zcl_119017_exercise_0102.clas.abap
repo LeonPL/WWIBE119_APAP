@@ -40,5 +40,26 @@ CLASS zcl_119017_exercise_0102 IMPLEMENTATION.
     result = ipow( base = 5 exp = 3  ). out->write( |Potenz: | && result ).
     result = nmin( val1 = 3 val2 = 5  ). out->write( |Minimum: | && result ).
 
+    Data operand1 type p length 2 decimals 2 value '3.14'.
+    Data operand2 type p length 2 decimals 2 value '5.6'.
+    Data operator2 type c length 1 value '/'.
+    DATA result2 type p Length 16 decimals 2.
+
+    case operator2.
+        when '+'.
+        result2 = operand1 + operand2.
+        when '-'.
+        result2 = operand1 - operand2.
+        when '*'.
+        result2 = operand1 * operand2.
+        when '/'.
+        result2 = operand1 / operand2.
+        when 'm' OR 'M'.
+        result2 = nmin( val1 = operand1 val2 = operand2 ).
+        when others.
+        out->write( |Fehler ungültiger Operator| ).
+    endcase.
+
+    out->write( |Ergebnis: | && result2 ).
   ENDMETHOD.
 ENDCLASS.
